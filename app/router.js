@@ -7,11 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-  this.route('rations', function() {
+  this.route('ration', function () {
     this.route('new');
   });
 
-  this.route('ration', function() {
+  this.route('ration', function () {
     this.route('edit');
   });
 });
