@@ -6,8 +6,14 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
-Router.map(() => {
-  this.route('rations');
+Router.map(function () {
+  this.route('rations', function() {
+    this.route('new');
+  });
+
+  this.route('ration', function() {
+    this.route('edit');
+  });
 });
 
 export default Router;
