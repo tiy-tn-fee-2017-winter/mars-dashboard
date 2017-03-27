@@ -6,7 +6,11 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
-Router.map(() => {
+Router.map(function () {
+  this.route('crew', function () {
+    this.route('new');
+    this.route('edit');
+  });
 });
 
 export default Router;
