@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+
+@import "bootstrap";
+@import "admin";
+@import "skin";
+
+.wrapper {
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100vh;
+
+  &__content {
+    flex-grow: 1;
+
+    display: flex;
+  }
+}
+
+.main-sidebar {
+  position: relative;
+  overflow-y: auto;
+
+  padding-top: 0;
+}

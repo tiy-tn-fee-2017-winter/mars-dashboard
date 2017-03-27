@@ -2,16 +2,19 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
+  console.log(defaults.lessOptions);
+
   const app = new EmberApp(defaults, {
     'ember-bootstrap': {
-      bootstrapVersion: 4,
-      importBootstrapFont: false,
-      importBootstrapCSS: false
+      bootstrapVersion: 3,
+      importBootstrapFont: true,
+      importBootstrapCSS: true
     },
 
-    sassOptions: {
-      includePaths: [
-        'bower_components/foundation/scss'
+    lessOptions: {
+      paths: [
+        'node_modules/bootstrap/less',
+        'node_modules/admin-lte/build',
       ]
     }
   });
