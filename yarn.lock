@@ -1807,6 +1807,15 @@ ember-ajax@^2.4.1:
   dependencies:
     ember-cli-babel "^5.1.5"
 
+ember-basic-dropdown@^0.31.1:
+  version "0.31.1"
+  resolved "https://registry.yarnpkg.com/ember-basic-dropdown/-/ember-basic-dropdown-0.31.1.tgz#cfc985ac150fa61a9a60b31d7409b616f9b3ff32"
+  dependencies:
+    ember-cli-babel "^6.0.0-alpha.8"
+    ember-cli-htmlbars "^1.1.1"
+    ember-native-dom-helpers "^0.3.4"
+    ember-wormhole "^0.5.1"
+
 ember-bootstrap@^1.0.0-alpha.8:
   version "1.0.0-alpha.8"
   resolved "https://registry.yarnpkg.com/ember-bootstrap/-/ember-bootstrap-1.0.0-alpha.8.tgz#e02fa57a3e2084b640f89669cdc0987f61d361da"
@@ -1842,7 +1851,7 @@ ember-cli-babel@^5.1.10, ember-cli-babel@^5.1.3, ember-cli-babel@^5.1.5, ember-c
     ember-cli-version-checker "^1.0.2"
     resolve "^1.1.2"
 
-ember-cli-babel@^6.0.0-beta.7:
+ember-cli-babel@^6.0.0-alpha.8, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.0.0-beta.9:
   version "6.0.0-beta.9"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.0.0-beta.9.tgz#b597d52f12d4429cd5716b55f749ebf6144b7b16"
   dependencies:
@@ -1855,6 +1864,12 @@ ember-cli-babel@^6.0.0-beta.7:
     broccoli-source "^1.1.0"
     clone "^2.0.0"
     ember-cli-version-checker "^1.2.0"
+
+ember-cli-bootstrap-datepicker@^0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/ember-cli-bootstrap-datepicker/-/ember-cli-bootstrap-datepicker-0.5.6.tgz#efa86a5d4a8b6883ee749c9bd50e1f70f17fe0a5"
+  dependencies:
+    ember-cli-babel "^5.1.5"
 
 ember-cli-broccoli-sane-watcher@^2.0.4:
   version "2.0.4"
@@ -1997,6 +2012,12 @@ ember-cli-qunit@^3.1.0:
     qunitjs "^2.0.1"
     resolve "^1.1.6"
     silent-error "^1.0.0"
+
+ember-cli-select-picker@^2.3.8:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/ember-cli-select-picker/-/ember-cli-select-picker-2.3.8.tgz#333aa508887716abf2418129259a346b338dfb6d"
+  dependencies:
+    ember-cli-babel "^5.1.3"
 
 ember-cli-shims@^1.0.2:
   version "1.1.0"
@@ -2189,6 +2210,13 @@ ember-load-initializers@^0.6.0:
   dependencies:
     ember-cli-babel "^5.1.6"
 
+ember-native-dom-helpers@^0.3.4:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/ember-native-dom-helpers/-/ember-native-dom-helpers-0.3.5.tgz#df492bc34f6b277f0c9d2adcacb3fd8a3e11defa"
+  dependencies:
+    broccoli-funnel "^1.1.0"
+    ember-cli-babel "^6.0.0-beta.9"
+
 ember-qunit@^2.0.0-beta.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ember-qunit/-/ember-qunit-2.1.0.tgz#42caad88f477455f99e7cba1cde568967fa74046"
@@ -2277,6 +2305,13 @@ ember-welcome-page@^2.0.2:
 ember-wormhole@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/ember-wormhole/-/ember-wormhole-0.4.1.tgz#55fafaad20a650d21f6583a0e59c060a65338111"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-cli-htmlbars "^1.0.3"
+
+ember-wormhole@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/ember-wormhole/-/ember-wormhole-0.5.1.tgz#f2a6fff13b1c037ffa83b2c9291d8b5978878e5b"
   dependencies:
     ember-cli-babel "^5.1.6"
     ember-cli-htmlbars "^1.0.3"
