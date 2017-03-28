@@ -4,7 +4,7 @@
     {{!-- TODO add for and ids to labels and inputs --}}
     <div class="form-group">
       <label>Name</label>
-      <input class="form-control" placeholder="Name" value=formValues.name>
+      <input class="form-control" placeholder="Name">
     </div>
     <div class="form-group">
       {{!-- TODO make these bind the data and not be stupid links --}}
@@ -17,14 +17,14 @@
     </div>
     <div class="form-group">
       <label>Qty</label>
-    <input class="form-control" placeholder="Qty" value=formValues.quantity>
+    <input class="form-control" placeholder="Qty">
     </div>
     <div class="form-group">
       <label>Unit Weight</label>
-      <input class="form-control" placeholder="Weight" value=formValues.weight>
+      <input class="form-control" placeholder="Weight">
     </div>
     <div class="form-group">
-      <label>Expires On</label> {{bootstrap-datepicker value=formValues.expiration placeholder="Date" class="form-control"}}
+      <label>Expires On</label> {{bootstrap-datepicker placeholder="Date" class="form-control"}}
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
