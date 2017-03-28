@@ -12,5 +12,9 @@ export default Ember.Controller.extend({
     'Irradiated',
     'Rehydratable Food',
     'Thermostabilized',
-  ]
+  ],
+
+  actions: {
+
+  }
 });
