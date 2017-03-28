@@ -1,20 +1,28 @@
-  {{#bs-modal modal3 true as |modal|}}
+  {{#bs-modal modal3 true  onSubmit=(action "submit") as |modal|}}
     {{#modal.header}}
-      <h4 class="modal-title">{{rationType.name}}</h4>
+      <h4 class="modal-title">{{model.name}}</h4>
     {{/modal.header}}
 
     {{#modal.body}}
       <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: {{calc-percent rationType.quantity rationType.remaining}}%;" aria-valuenow="{{calc-percent rationType.quantity rationType.remaining}}"></div>
+        <div class="progress-bar" role="progressbar" style="width: {{calc-percent model.quantity model.remaining}}%;" aria-valuenow="{{calc-percent model.quantity model.remaining}}"></div>
       </div>
-    {{/modal.body}}
+      <p>How many used?</p>
+      <pre>{{model.change}}</pre>
 
-    {{#modal.footer}}
+
+
+      {{input type="range" placeholder="0" name="" value=model.change min="0" max="10"}}
+
+  {{/modal.body}}
+
+  {{#modal.footer}}
       {{#link-to 'inventory.index'}}
         {{#bs-button}}Cancel{{/bs-button}}
       {{/link-to}}
-      {{#bs-button type="success" onClick=(action modal.submit)}}Save{{/bs-button}}
-    {{/modal.footer}}
+      {{#bs-button type="success" onClick=(action modal.submit)}}Submit{{/bs-button}}
+
+  {{/modal.footer}}
 
   {{/bs-modal}}
 

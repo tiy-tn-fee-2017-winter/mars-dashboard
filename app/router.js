@@ -7,8 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-  this.route('inventory', function() {
-    this.route('change');
+  this.route('inventory', function () {
+    this.route('change', { path: '/:ration_id/inventory' });
   });
 });
 
