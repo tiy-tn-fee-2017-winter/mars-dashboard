@@ -1,0 +1,46 @@
+
+
+  <div class="fuel-title">FUEL OPTIONS</div>
+<form class="form" {{action "save" on="submit"}}>
+  <div class="form-group">
+  <label for="fuel-type">Fuel Type</label>
+  <select class="fuel-options" name="">
+    <option value="select-option">Please Select</option>
+    <option value="Super-Plus">Super Plus</option>
+    <option value="Mid">Mid</option>
+    <option value="Regular">Regular</option>
+  </select>
+  </div>
+  <div class="form-group">
+  <label for="burn-rate">Burn Rate</label>
+  {{input value=formValues.burnRate class="form-control" placeholder="Burn Rate"}}
+  </div>
+  <div class="form-group">
+  <label for="weight">Capacity</label>
+  {{input value=formValues.capacity class="form-control" placeholder="Capacity"}}
+  </div>
+  <div class="form-group">
+  <label for="volume">Volume</label>
+  {{input value=formValues.volume class="form-control" placeholder="Volume"}}
+  </div>
+
+<div class="form-buttons">
+  {{#link-to "index" class="button"}}Back{{/link-to}}
+
+  <button type="submit" class="button">Submit</button>
+</div>
+</form>
+
+
+
+
+<div class="row">
+  <div class="col-md-6">SVG GOES HERE</div>
+  <div class="col-md-6">SVG GOES HERE</div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">SVG GOES HERE</div>
+  <div class="col-md-4">SVG GOES HERE</div>
+  <div class="col-md-4">SVG GOES HERE</div>
+</div>

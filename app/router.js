@@ -6,7 +6,8 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
-Router.map(() => {
+Router.map(function (){
+  this.route('fuel');
 });
 
 export default Router;
