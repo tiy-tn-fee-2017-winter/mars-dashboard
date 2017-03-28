@@ -10,6 +10,7 @@ Router.map(function () {
   this.route('crew', function () {
     this.route('new');
     this.route('edit');
+    this.route('member');
   });
 });
 

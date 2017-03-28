@@ -1,37 +1,35 @@
-<div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading"><h3>Add New Crew Member</h3></div>
-      <form {{action "submitForm" on="submit"}}>
-        <div class="panel-body">
-          <div class="form-group">
-            {{input type="text" class="form-control" placeholder="First Name" value=formValues.first_name}}
-          </div>
-          <div class="form-group">
-            {{input type="text" class="form-control" placeholder="Last Name" value=formValues.last_name}}
-          </div>
-          <div class="form-group">
-            {{input type="text" class="form-control" placeholder="Role" value=formValues.role}}
-          </div>
-          <div class="form-group">
-            {{input type="text" class="form-control" placeholder="Skills" value=formValues.skills}}
-          </div>
-          <div class="form-group">
-            {{input type="text" class="form-control" placeholder="SSN" value=formValues.ssn}}
-          </div>
-          <div class="form-group">
-            {{input type="text" class="form-control" placeholder="Allergies" value=formValues.allergies}}
-          </div>
-          <div class="form-group">
-            {{input type="text" class="form-control" placeholder="Blood Type" value=formValues.blood_type}}
-          </div>
-          <div class="form-group">
-            {{input type="text" class="form-control" placeholder="Country" value=formValues.country}}
-          </div>
+<div class="panel panel-default">
+  <div class="panel-heading"><h3>Add New Crew Member</h3></div>
+    <form {{action "submitForm" on="submit"}}>
+      <div class="panel-body">
+        <div class="form-group">
+          {{input type="text" class="form-control" placeholder="First Name" value=formValues.first_name}}
         </div>
-        <div class="panel-footer">
-          {{#link-to "crew.index" class="btn btn-default"}}Back{{/link-to}}
-          <button type="submit" class="btn btn-warning">Submit</button>
+        <div class="form-group">
+          {{input type="text" class="form-control" placeholder="Last Name" value=formValues.last_name}}
         </div>
-      </form>
-  </div>
+        <div class="form-group">
+          {{input type="text" class="form-control" placeholder="Role" value=formValues.role}}
+        </div>
+        <div class="form-group">
+          {{input type="text" class="form-control" placeholder="Skills" value=formValues.skills}}
+        </div>
+        <div class="form-group">
+          {{input type="text" class="form-control" placeholder="SSN" value=formValues.ssn}}
+        </div>
+        <div class="form-group">
+          {{input type="text" class="form-control" placeholder="Allergies" value=formValues.allergies}}
+        </div>
+        <div class="form-group">
+          {{input type="text" class="form-control" placeholder="Blood Type" value=formValues.blood_type}}
+        </div>
+        <div class="form-group">
+          {{input type="text" class="form-control" placeholder="Country" value=formValues.country}}
+        </div>
+      </div>
+      <div class="panel-footer">
+        {{#link-to "crew.index" class="btn btn-default"}}Back{{/link-to}}
+        <button type="submit" class="btn btn-warning">Submit</button>
+      </div>
+    </form>
 </div>

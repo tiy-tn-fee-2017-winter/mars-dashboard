@@ -10,5 +10,5 @@ export default DS.Model.extend({
   blood_type: DS.attr(),
   country: DS.attr(),
 
-  mission: DS.belongsTo('mission'),
+  // mission: DS.belongsTo('mission'),
 });
