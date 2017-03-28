@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     return {
       name: 'Cheerios',
       quantity: 10,
-      change: 0,
+      // change: 0,
       remaining: 10,
       id: 0,
     };

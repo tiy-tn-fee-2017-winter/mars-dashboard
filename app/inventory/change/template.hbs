@@ -1,4 +1,4 @@
-  {{#bs-modal modal3 true  onSubmit=(action "submit") as |modal|}}
+  {{#bs-modal closeButton false modal3 true  onSubmit=(action "updateQuantity") as |modal|}}
     {{#modal.header}}
       <h4 class="modal-title">{{model.name}}</h4>
     {{/modal.header}}
@@ -11,8 +11,9 @@
       <pre>{{model.change}}</pre>
 
 
-
-      {{input type="range" placeholder="0" name="" value=model.change min="0" max="10"}}
+      <form>
+        {{input type="range" placeholder="0" name="" value=model.change min="0" max="10"}}
+      </form>
 
   {{/modal.body}}
 
@@ -25,5 +26,3 @@
   {{/modal.footer}}
 
   {{/bs-modal}}
-
-{{#bs-button onClick=(action (mut modal3) true)}}Open Modal{{/bs-button}}

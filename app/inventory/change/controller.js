@@ -2,11 +2,17 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    submit() {
+    updateQuantity() {
       const change = this.model.change;
-      const remaining = this.model.remaining;
+      const startingValue = this.model.remaining;
 
-      return remaining - change;
+      const remaining = startingValue - change;
+
+      return this.model.remaining = remaining
+
+        .then(() => {
+          this.transitionToRoute('inventory.index');
+        });
     },
   }
 });
