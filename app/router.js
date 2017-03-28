@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-  this.route('ration', function () {
+  this.route('ration', { path: '/rations' }, function () {
     this.route('new');
   });
 
