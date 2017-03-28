@@ -2,6 +2,10 @@
 
 module.exports = function (environment) {
   const ENV = {
+    DS: {
+      host: 'http://localhost:3333',
+    },
+
     modulePrefix: 'mars-dashboard',
     environment,
     rootURL: '/',
