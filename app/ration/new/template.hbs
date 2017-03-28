@@ -4,11 +4,10 @@
     {{!-- TODO add for and ids to labels and inputs --}}
     <div class="form-group">
       <label>Name</label>
-      <input class="form-control" placeholder="Name">
+      <input class="form-control" placeholder="Name" value=formValues.name>
     </div>
     <div class="form-group">
       {{!-- TODO make these bind the data and not be stupid links --}}
-      {{!-- TODO make the selected dropdown option display to the user once selected --}}
       <label>Type</label>
       <p>
         {{select-picker content=types
@@ -18,14 +17,14 @@
     </div>
     <div class="form-group">
       <label>Qty</label>
-    <input class="form-control" placeholder="Qty">
+    <input class="form-control" placeholder="Qty" value=formValues.quantity>
     </div>
     <div class="form-group">
       <label>Unit Weight</label>
-      <input class="form-control" placeholder="Weight">
+      <input class="form-control" placeholder="Weight" value=formValues.weight>
     </div>
     <div class="form-group">
-      <label>Expires On</label> {{bootstrap-datepicker value=expiresAt placeholder="Date" class="form-control"}}
+      <label>Expires On</label> {{bootstrap-datepicker value=formValues.expiration placeholder="Date" class="form-control"}}
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
