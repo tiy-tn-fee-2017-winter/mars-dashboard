@@ -1,8 +1,8 @@
-  <div class="alert alert-danger alert-dismissible">
+
+  {{!-- <div class="alert alert-danger alert-dismissible">
     <h4><i class="icon fa fa-ban"></i> Alert!!!</h4>
     <p>Inventory is getting low. Based on your current mission, you can eat 5 cherrios per day!</p>
-  </div>
-
+  </div> --}}
 
   <h2>Inventory</h2>
 
@@ -13,21 +13,23 @@
     </div>
     <div class="box-body">
       {{#each model as |rationType|}}
-        <div class="item-info">
-          <p>{{rationType.name}}</p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="50"></div>
+        {{#link-to "inventory.change"}}
+          <div class="item-info">
+            <p>{{rationType.name}}</p>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: {{calc-percent rationType.quantity rationType.remaining}}%;" aria-valuenow="{{calc-percent rationType.quantity rationType.remaining}}"></div>
+            </div>
           </div>
-        </div>
+        {{/link-to}}
       {{/each}}
 
     </div>
   </div>
-
+ {{outlet}}
 
 
   {{!-- // Form Card --}}
-  <div class="box">
+  {{!-- <div class="box">
     <div class="box-header">
       <h3 class="card-title">How Many Did You Eat Today?</h3>
     </div>
@@ -46,4 +48,4 @@
         </p>
       </form>
     </div>
-  </div>
+ </div> --}}

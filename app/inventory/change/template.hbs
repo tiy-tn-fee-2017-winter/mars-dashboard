@@ -1,0 +1,21 @@
+  {{#bs-modal modal3 true as |modal|}}
+    {{#modal.header}}
+      <h4 class="modal-title">{{rationType.name}}</h4>
+    {{/modal.header}}
+
+    {{#modal.body}}
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{calc-percent rationType.quantity rationType.remaining}}%;" aria-valuenow="{{calc-percent rationType.quantity rationType.remaining}}"></div>
+      </div>
+    {{/modal.body}}
+
+    {{#modal.footer}}
+      {{#link-to 'inventory.index'}}
+        {{#bs-button}}Cancel{{/bs-button}}
+      {{/link-to}}
+      {{#bs-button type="success" onClick=(action modal.submit)}}Save{{/bs-button}}
+    {{/modal.footer}}
+
+  {{/bs-modal}}
+
+{{#bs-button onClick=(action (mut modal3) true)}}Open Modal{{/bs-button}}
