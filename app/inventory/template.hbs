@@ -17,7 +17,7 @@
           <div class="item-info">
             <p>{{rationType.name}}</p>
             <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: {{calc-percent rationType.quantity rationType.remaining}}%;" aria-valuenow="{{calc-percent rationType.quantity rationType.remaining}}"></div>
+              <div class="progress-bar" role="progressbar" style="{{calc-percent rationType.quantity rationType.remaining}}" aria-valuenow="{{calc-percent rationType.quantity rationType.remaining}}"></div>
             </div>
           </div>
         {{/link-to}}
