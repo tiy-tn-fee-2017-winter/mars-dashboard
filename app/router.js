@@ -12,6 +12,14 @@ Router.map(function () {
     this.route('edit');
     this.route('member');
   });
+
+  this.route('mission', function () {
+    this.route('create');
+
+    this.route('edit', {
+      path: '/:mission_id/edit'
+    });
+  });
 });
 
 export default Router;

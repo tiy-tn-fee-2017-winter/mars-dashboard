@@ -5,8 +5,7 @@ moduleForComponent('top-nav', 'Integration | Component | top nav', {
   integration: true
 });
 
-test('it renders', function(assert) {
-
+test('it renders', function (assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
