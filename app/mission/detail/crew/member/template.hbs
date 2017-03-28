@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3>John Michael Bluth
-      {{#link-to "crew.index" class="btn btn-default pull-right"}}Back{{/link-to}}
+    <h3>{{model.firstName}} {{model.lastName}}
+      {{#link-to "mission.detail.crew.index" class="btn btn-default pull-right"}}Back{{/link-to}}
     </h3>
 
   </div>
@@ -15,7 +15,7 @@
             <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
           <div class="info-box-content">
-            <span class="info-box-text">Role:</span>
+            <span class="info-box-text">Role: {{model.role}}</span>
           </div>
             <!-- /.info-box-content -->
           </div>
@@ -23,7 +23,7 @@
           <div class="info-box bg-green">
             <span class="info-box-icon"><i class="ion ion-ios-heart-outline"></i></span>
             <div class="info-box-content">
-              <span class="info-box-text">Skills:</span>
+              <span class="info-box-text">Country: {{model.country}}</span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -32,7 +32,7 @@
             <span class="info-box-icon"><i class="ion ion-ios-cloud-download-outline"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Country:</span>
+              <span class="info-box-text">Blood Type: {{model.bloodType}}</span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -41,7 +41,7 @@
             <span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Missions:</span>
+              <span class="info-box-text">Missions: ???</span>
             </div>
             <!-- /.info-box-content -->
           </div>

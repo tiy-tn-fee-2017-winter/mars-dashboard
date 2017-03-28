@@ -6,9 +6,11 @@ export default DS.Model.extend({
   role: DS.attr(),
   skills: DS.attr(),
   ssn: DS.attr(),
-  allergies: DS.attr(),
+  allergies: DS.attr({
+    defaultValue() { return []; }
+  }),
   bloodType: DS.attr(),
   country: DS.attr(),
 
-  // mission: DS.belongsTo('mission'),
+  mission: DS.belongsTo('mission'),
 });

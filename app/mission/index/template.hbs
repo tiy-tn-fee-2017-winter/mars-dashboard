@@ -5,6 +5,7 @@
     {{mission.objective}} {{mission.location}} {{mission.launchTime}} {{mission.duration}} {{mission.hostCountry}}
 
     {{#link-to "mission.edit" mission}}Edit{{/link-to}}
+    {{#link-to "mission.detail.crew" mission}}Details and Crew{{/link-to}}
 
     <button {{action "deleteMission" mission}}>Delete</button>
     </li>

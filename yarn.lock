@@ -1824,6 +1824,12 @@ ember-bootstrap@^1.0.0-alpha.8:
     rsvp "^3.3.3"
     silent-error "^1.0.1"
 
+ember-changeset@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/ember-changeset/-/ember-changeset-1.2.3.tgz#8cb96e42f64da7c3181425ed69f6c1d6dc4d656f"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+
 ember-cli-app-version@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/ember-cli-app-version/-/ember-cli-app-version-2.0.2.tgz#aaeede608e92fae6c2e11f63d28a373c1cc3f070"
