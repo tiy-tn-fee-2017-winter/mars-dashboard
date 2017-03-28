@@ -4,6 +4,8 @@
   <li>
     {{mission.objective}} {{mission.location}} {{mission.launchTime}} {{mission.duration}} {{mission.hostCountry}}
 
+    {{#link-to "mission.edit" mission}}Edit{{/link-to}}
+
     <button {{action "deleteMission" mission}}>Delete</button>
     </li>
 {{/each}}

@@ -9,7 +9,10 @@ const Router = Ember.Router.extend({
 Router.map(function ()  {
   this.route('mission', function () {
     this.route('create');
-    this.route('edit');
+
+    this.route('edit', {
+      path: '/:mission_id/edit'
+    });
   });
 });
 
