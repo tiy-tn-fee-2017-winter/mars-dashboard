@@ -2,13 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   formValues: {
-    first_name: '',
-    last_name: '',
+    firstName: '',
+    lastName: '',
     role: '',
     skills: [],
     ssn: '',
     allergies: [],
-    blood_type: '',
+    bloodType: '',
     country: '',
   },
 
