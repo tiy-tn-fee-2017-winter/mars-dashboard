@@ -1,9 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  formValues: {
-
-  },
   types: [
     'Beverage',
     'Condiment',
@@ -15,6 +12,10 @@ export default Ember.Controller.extend({
   ],
 
   actions: {
+    saveRation(formValues) {
+      const ration = this.store.createRecord('ration', formValues);
 
+      ration.save();
+    }
   }
 });
