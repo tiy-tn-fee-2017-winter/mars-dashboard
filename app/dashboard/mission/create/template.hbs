@@ -1,0 +1,50 @@
+<form {{action "saveMission" on="submit"}}>
+  <div class="form-container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="lightblack">
+          <div class="missions-form form-horizontal clearfix">
+
+            <div class="col-sm-12">
+              <div class="form-group">
+                {{input class="form-control input-lg" type="text" value=formValues.objective placeholder="Mission Objective"}}
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="form-group">
+                {{input class="form-control input-lg" type="text" value=formValues.location placeholder="Final Destination"}}
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                {{input class="form-control input-lg" type="text" value=formValues.hostCountry placeholder="Host Country"}}
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                {{input class="form-control input-lg" type="date" value=formValues.launchTime placeholder="Launch Time"}}
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="form-group">
+                {{input class="form-control input-lg" type="text" value=formValues.duration placeholder="Duration of Trip"}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class=button-container>
+          <div class=single-button-container>
+            {{#link-to "dashboard.mission.index" class="btn btn-grey btn-arrow-left" }}Back{{/link-to}}
+          </div>
+          <div class=single-button-container>
+            <button class="btn btn-orange" type="submit" name="button">Save Mission</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</form>

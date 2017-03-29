@@ -1,0 +1,38 @@
+<div class="hold-transition login-page">
+  <div class="login-box">
+    <h2 class="login-logo">
+      Mission to Mars
+    </h2>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+      <p class="login-box-msg">Login!</p>
+
+      {{#with (changeset model validator) as |formValues|}}
+        <form {{action "loginUser" formValues on="submit"}}>
+          {{#form-input changeset=formValues label="Email" property="email"}}
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          {{/form-input}}
+
+          {{#form-input changeset=formValues type="password" label="Password" property="password"}}
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          {{/form-input}}
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+          </div>
+        </form>
+      {{/with}}
+
+      <p>
+        Need an account?
+        {{#link-to "register" class="text-center"}}
+          Register
+        {{/link-to}}
+      </p>
+
+    </div>
+    <!-- /.login-box-body -->
+  </div>
+  <!-- /.login-box -->
+
+</div>

@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
       return this.model.remaining = remaining
 
         .then(() => {
-          this.transitionToRoute('inventory.index');
+          this.transitionToRoute('dashboard.inventory.index');
         });
     },
   }

@@ -1,0 +1,45 @@
+{{#with (changeset model) as |formValues|}}
+  <h2>Editing {{model.objective}}</h2>
+  <form class="form-horizontal"{{action "saveMission" formValues on="submit"}}>
+
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="form-group">
+            {{input class="form-control input-lg" type="text" value=formValues.objective}}
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="form-group">
+              {{input class="form-control input-lg" type="text" value=formValues.location}}
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+              {{input class="form-control input-lg" type="text" value=formValues.hostCountry}}
+          </div>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="form-group">
+                {{input class="form-control input-lg" type="date" value=formValues.launchTime}}
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+                {{input class="form-control input-lg" type="text" value=formValues.duration}}
+            </div>
+          </div>
+        </div>
+
+        <div>
+          {{#link-to "dashboard.mission.index" class="btn btn-grey"}}Back{{/link-to}}
+          <button class="btn btn-orange" type="submit" name="button">Save Mission</button>
+        </div>
+      </form>
+
+{{/with}}

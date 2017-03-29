@@ -1,11 +1,77 @@
+
 * {
   box-sizing: border-box;
 }
 
-
 @import "bootstrap";
 @import "admin";
 @import "skin";
+@import "missions";
+
+// $c-app-orange: #dd4b39
+//
+@orange: #dd4b39;
+@darkorange: #d73925;
+@lightblack: #222d32;
+@midblack: #1e282c;
+@antiquewhite: antiquewhite;
+@white: #fff;
+@grey: #503f37;
+@lightgrey: #444449;
+
+.lightblack {
+  background-color: @lightblack;
+  padding: 3rem 2rem 2.9rem 2rem;
+  border-radius: 1rem;
+}
+
+.button-container {
+  background-color: @antiquewhite;
+  padding: 3rem 2rem 4.7rem 2rem;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.darkblack {
+  background-color: @midblack;
+  color: @antiquewhite;
+}
+
+.single-button-container {
+  margin-right: 6rem;
+  margin-left: 6rem;
+  margin-top: 1rem;
+}
+
+.btn-orange {
+  background-color: @orange;
+  border: 2.5rem solid @darkorange;
+  color: @antiquewhite;
+  border-radius: 50%;
+  padding: 4rem 1rem;
+  box-shadow: .25rem .25rem @grey;
+  font-weight: bold;
+
+// &:hover {
+//   background-color: #da6c5f;
+//   border: 2.5rem solid @lightorange;
+//   }
+}
+
+.logo-pic {
+  height: 1.5em;
+}
+
+.btn-grey {
+  background-color: @lightgrey;
+  border: 2.5rem solid @lightblack;
+  color: @antiquewhite;
+  border-radius: 50%;
+  padding: 4.3rem 3.8rem;
+  box-shadow: .25rem .25rem #0d0c0c;
+  font-weight: bold;
+}
+@import "ember-basic-dropdown";
 
 .wrapper {
   display: flex;
@@ -50,12 +116,6 @@
   }
 }
 
-// Modal OverRides
-.secret-inventory-class-for-our-use-only {
-  position: relative;
-  width: 100vh;
-  height: 100%;
-}
 
 .modal-dialog {
   height: 100vh;
@@ -73,3 +133,39 @@
 .close {
   display: none;
 }
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: auto;
+  min-height: 100vh;
+}
+
+.login-box {
+  margin: 0;
+}
+
+.content-wrapper {
+  margin-left: 0;
+  flex-grow: 1;
+}
+
+li {
+  list-style: none;
+}
+
+.missions-form {
+  // background: @orange;git
+}
+
+.table-header {
+  background-color: @lightblack;
+  color: @white;
+}
+
+// .form-container {
+//   display: flex;
+// }
