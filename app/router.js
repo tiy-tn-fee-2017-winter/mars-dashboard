@@ -16,6 +16,7 @@ Router.map(function () {
       path: '/:mission_id/edit'
     });
   });
+  this.route('login');
 });
 
 export default Router;

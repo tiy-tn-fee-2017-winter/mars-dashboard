@@ -7,16 +7,16 @@
     <div class="login-box-body">
       <p class="login-box-msg">Register for your account!</p>
 
-      {{#with (changeset values) as |formValues|}}
+      {{#with (changeset model validator) as |formValues|}}
         <form {{action "saveUser" formValues on="submit"}}>
-          <div class="form-group has-feedback">
-            {{input type="text" class="form-control" placeholder="Email" value=formValues.email}}
+          {{#form-input changeset=formValues label="Email" property="email"}}
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-          </div>
-          <div class="form-group has-feedback">
-            {{input type="password" class="form-control" placeholder="Password" value=formValues.password}}
+          {{/form-input}}
+
+          {{#form-input changeset=formValues type="password" label="Password" property="password"}}
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-          </div>
+          {{/form-input}}
+
           <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
           </div>
