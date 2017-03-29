@@ -1,4 +1,4 @@
-
+<div class="col-md-10">
 <table class="table table-striped">
   <thead>
     <tr class="table-header">
@@ -8,6 +8,7 @@
       <th>Duration</th>
       <th>Host Country</th>
       <th>Edit Mission</th>
+      <th>Delete Mission</th>
       <th>Mission Details</th>
     </tr>
   </thead>
@@ -20,13 +21,29 @@
     <td>{{mission.duration}}</td>
     <td>{{mission.hostCountry}}</td>
     <td>{{#link-to "mission.edit" mission}}Edit{{/link-to}}</td>
+    <td><button {{action "deleteMission" mission}}>Delete</button></td>
     <td>Mission Details</td>
     {{!-- <td>{{#link-to "mission.details" details}}See More{{/link-to}}</td> --}}
     </tr>
     {{/each}}
   </tbody>
+  <tfoot class="lightblack table-foot">
+    <tr class="table-foot">
+      <td>""</td>
+      <td>""</td>
+      <td>""</td>
+      <td>""</td>
+      <td>""</td>
+      <td>""</td>
+      <td>""</td>
+      <td>""</td>
+    </tr>
+  </tfoot>
 </table>
-{{#link-to "mission.create" class="btn btn-orange"}}Add Mission{{/link-to}}
+</div>
+<div class="col-md-2">
+  {{#link-to "mission.create" class="btn btn-orange"}}Add Mission{{/link-to}}
+</div>
 
 {{!-- {{#each model as |mission|}}
   <li>
