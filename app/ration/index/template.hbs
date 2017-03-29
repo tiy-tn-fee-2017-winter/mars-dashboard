@@ -1,10 +1,11 @@
 <div class="box-body">
-  {{#each model as |ration|}}
-    <p>{{ration.name}}</p>
-  {{/each}}
-
-
-  {{#link-to "ration.new" class="btn btn-default btn-lg"}}<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add New {{/link-to}}
-  {{#link-to "ration.new" class="btn btn-default btn-lg"}}<span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Inventory {{/link-to}}
-
+  <p>
+    {{#each model as |ration|}}
+      {{#link-to "ration.detail" ration class="btn btn-default"}}{{ration.name}}{{/link-to}}
+    {{/each}}
+  </p>
+  <p>
+    {{#link-to "ration.new" class="btn btn-default btn-lg"}}<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add New {{/link-to}}
+    {{#link-to "ration.new" class="btn btn-default btn-lg"}}<span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Inventory {{/link-to}}
+  </p>
 </div>

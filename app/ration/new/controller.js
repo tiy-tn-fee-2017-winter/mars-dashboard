@@ -12,10 +12,11 @@ export default Ember.Controller.extend({
   ],
 
   actions: {
-    saveRation(formValues) {
+    async saveRation(formValues) {
       const ration = this.store.createRecord('ration', formValues);
 
-      ration.save();
+      await ration.save();
+      this.transitionToRoute('ration.index');
     }
   }
 });

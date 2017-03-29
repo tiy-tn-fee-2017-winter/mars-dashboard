@@ -1,0 +1,19 @@
+<div class="box-body">
+  <p>
+    {{model.name}}
+  </p>
+  <p>
+    {{model.type}}
+  </p>
+  <p>
+    {{model.quantity}}
+  </p>
+  <p>
+    {{model.weight}}
+  </p>
+  <p>
+    {{#link-to "ration.index" class="btn btn-default" }}Back{{/link-to}}
+    {{#link-to "ration.edit" model class="btn btn-default"}}Edit{{/link-to}}
+    <button type="button" name="button" {{action 'delete'}} class="btn btn-default">Delete</button>
+  </p>
+</div>
