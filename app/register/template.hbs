@@ -24,7 +24,10 @@
       {{/with}}
 
       <p>
-        Already have an account? <a href="login" class="text-center">Login</a>
+        Already have an account?
+        {{#link-to "login" class="text-center"}}
+          Login
+        {{/link-to}}
       </p>
 
     </div>
