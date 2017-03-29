@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
       await mission.save();
 
       this.set('formValues', {});
-      this.transitionToRoute('mission.index');
+      this.transitionToRoute('dashboard.mission.index');
     }
   }
 });

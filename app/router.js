@@ -7,15 +7,17 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-  this.route('dashboard', { path: '/' });
-  this.route('register');
-  this.route('mission', function () {
-    this.route('create');
+  this.route('dashboard', { path: '/' }, function () {
+    this.route('mission', function () {
+      this.route('create');
 
-    this.route('edit', {
-      path: '/:mission_id/edit'
+      this.route('edit', {
+        path: '/:mission_id/edit'
+      });
     });
   });
+
+  this.route('register');
   this.route('login');
 });
 

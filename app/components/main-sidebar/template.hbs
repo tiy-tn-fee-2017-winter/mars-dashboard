@@ -31,7 +31,13 @@
     <ul class="sidebar-menu">
       <li class="header">HEADER</li>
       <!-- Optionally, you can add icons to the links -->
-      <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+      {{#link-to "dashboard.mission" tagName="li"}}
+        {{#link-to "dashboard.mission"}}
+          <i class="fa fa-link"></i>
+          <span>Missions</span>
+        {{/link-to}}
+      {{/link-to}}
+
       <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
     </ul>
     <!-- /.sidebar-menu -->

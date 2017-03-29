@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     async saveMission(changeset) {
       await changeset.save();
 
-      this.transitionToRoute('mission.index');
+      this.transitionToRoute('dashboard.mission.index');
     },
   }
 });
