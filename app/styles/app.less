@@ -12,6 +12,35 @@
 // $c-app-orange: #dd4b39
 //
 @orange: #dd4b39;
+@darkorange: #d73925;
+@lightblack: #222d32;
+@midblack: #1e282c;
+@antiquewhite: antiquewhite;
+@white: #fff;
+@grey: #503f37;
+@lightgrey: #444449;
+
+.lightblack {
+  background-color: @lightblack;
+}
+
+.btn-orange {
+  background-color: @orange;
+  color: @midblack;
+  border-radius: 50%;
+  padding: 5rem 2rem;
+  box-shadow: .25rem .25rem @grey;
+  font-weight: bold;
+}
+
+.btn-grey {
+  background-color: @lightgrey;
+  color: @antiquewhite;
+  border-radius: 50%;
+  padding: 5rem 4.5rem;
+  box-shadow: .25rem .25rem #221f20;
+  font-weight: bold;
+}
 
 .wrapper {
   display: flex;
@@ -34,6 +63,11 @@
   padding-top: 0;
 }
 
+.content-wrapper {
+  margin-left: 0;
+  flex-grow: 1;
+}
+
 li {
   list-style: none;
 }
@@ -41,3 +75,12 @@ li {
 .missions-form {
   // background: @orange;git
 }
+
+.table-header {
+  background-color: @lightblack;
+  color: @white;
+}
+
+// .form-container {
+//   display: flex;
+// }

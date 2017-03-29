@@ -1,23 +1,48 @@
-<form class="missions-form" {{action "saveMission" on="submit"}}>
-  <p>
-    {{input type="text" value=formValues.objective placeholder="Objective"}}
-  </p>
-  <p>
-    {{input type="text" value=formValues.location placeholder="Location"}}
-  </p>
-  <p>
-    {{input type="datetime-local" value=formValues.launchTime placeholder="Launch Time"}}
-  </p>
-  <p>
-    {{input type="text" value=formValues.duration placeholder="Duration"}}
-  </p>
-  <p>
-    {{input type="text" value=formValues.hostCountry placeholder="Host Country"}}
-  </p>
+<div class="form-container">
+<div class="lightblack">
+  <form class="missions-form form-horizontal" {{action "saveMission" on="submit"}}>
 
-  <p>
-    {{#link-to "mission.index" class="button"}}Back{{/link-to}}
-    <button type="submit" name="button">Save Mission</button>
-  </p>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-group">
+          {{input class="form-control input-lg" type="text" value=formValues.objective placeholder="Mission Objective"}}
+        </div>
+      </div>
+    </div>
 
-</form>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+            {{input class="form-control input-lg" type="text" value=formValues.location placeholder="Final Destination"}}
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="form-group">
+            {{input class="form-control input-lg" type="text" value=formValues.hostCountry placeholder="Host Country"}}
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="form-group">
+              {{input class="form-control input-lg" type="date" value=formValues.launchTime placeholder="Launch Time"}}
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+              {{input class="form-control input-lg" type="text" value=formValues.duration placeholder="Duration of Trip"}}
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div>
+    <div>
+      {{#link-to "mission.index" class="btn btn-grey btn-arrow-left"}}Back{{/link-to}}
+      <button class="btn btn-orange" type="submit" name="button">Save Mission</button>
+    </div>
+  </div>
+
+</div>

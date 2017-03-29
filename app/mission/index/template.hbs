@@ -1,6 +1,34 @@
-{{#link-to "mission.create"}}Add Mission{{/link-to}}
 
-{{#each model as |mission|}}
+<table class="table table-striped">
+  <thead>
+    <tr class="table-header">
+      <th>Objective</th>
+      <th>Location</th>
+      <th>Launch Time</th>
+      <th>Duration</th>
+      <th>Host Country</th>
+      <th>Edit Mission</th>
+      <th>Mission Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |mission|}}
+    <tr>
+    <td>{{mission.objective}}</td>
+    <td>{{mission.location}}</td>
+    <td>{{mission.launchTime}}</td>
+    <td>{{mission.duration}}</td>
+    <td>{{mission.hostCountry}}</td>
+    <td>{{#link-to "mission.edit" mission}}Edit{{/link-to}}</td>
+    <td>Mission Details</td>
+    {{!-- <td>{{#link-to "mission.details" details}}See More{{/link-to}}</td> --}}
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{#link-to "mission.create" class="btn btn-orange"}}Add Mission{{/link-to}}
+
+{{!-- {{#each model as |mission|}}
   <li>
     {{mission.objective}} {{mission.location}} {{mission.launchTime}} {{mission.duration}} {{mission.hostCountry}}
 
@@ -8,4 +36,4 @@
 
     <button {{action "deleteMission" mission}}>Delete</button>
     </li>
-{{/each}}
+{{/each}} --}}
