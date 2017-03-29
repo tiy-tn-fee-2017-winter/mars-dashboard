@@ -47,8 +47,10 @@
     "ember-simple-form": "^2.2.0",
     "ember-source": "~2.12.0",
     "ember-welcome-page": "^2.0.2",
+    "ember-world-flags": "^0.2.6",
     "eslint-config-rtablada": "^4.1.0",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "ui-flag": "^0.2.0"
   },
   "engines": {
     "node": ">= 4"

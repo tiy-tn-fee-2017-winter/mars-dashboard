@@ -1,6 +1,7 @@
 {
   "name": "mars-dashboard",
   "dependencies": {
-    "bootstrap-datepicker": "^1.6.4"
+    "bootstrap-datepicker": "^1.6.4",
+    "flag-icon-css": "^2.8.0"
   }
 }
