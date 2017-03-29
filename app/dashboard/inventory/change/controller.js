@@ -2,17 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    updateQuantity() {
-      const change = this.model.change;
-      const startingValue = this.model.remaining;
+    async updateQuantity(changeset) {
+      changeset.save();
 
-      const remaining = startingValue - change;
+      const inventoryChange = this.store.createRecord('inventory-change', this.formValues);
 
-      return this.model.remaining = remaining
+      await inventoryChange.save();
 
-        .then(() => {
-          this.transitionToRoute('dashboard.inventory.index');
-        });
+      this.transitionToRoute('dashboard.inventory');
     },
   }
 });

@@ -1,4 +1,7 @@
-  {{#bs-modal closeButton false modal3 true  onSubmit=(action "updateQuantity") as |modal|}}
+{{#with (changeset formValues) as |changeset|}}
+
+
+  {{#bs-modal closeButton false modal3 true onSubmit=(action "updateQuantity" changeset) as |modal|}}
     {{#modal.header}}
       <h4 class="modal-title">{{model.name}}</h4>
     {{/modal.header}}
@@ -8,21 +11,20 @@
         <div class="progress-bar" role="progressbar" style="{{calc-percent model.quantity model.remaining}}" aria-valuenow="{{calc-percent model.quantity model.remaining}}"></div>
       </div>
       <p>How many used?</p>
-      <pre>{{model.remaining}}</pre>
+      <pre>{{changeset.quantity}}</pre>
 
 
-      <form>
-        {{input type="range" placeholder="0" name="" value=model.remaining min="0" max="10"}}
-      </form>
+      {{input type="range" placeholder="0" name="" value=changeset.quantity min="0" max="10"}}
 
-  {{/modal.body}}
+    {{/modal.body}}
 
-  {{#modal.footer}}
+    {{#modal.footer}}
       {{#link-to 'dashboard.inventory.index'}}
         {{#bs-button}}Cancel{{/bs-button}}
       {{/link-to}}
       {{#bs-button type="success" onClick=(action modal.submit)}}Submit{{/bs-button}}
 
-  {{/modal.footer}}
+    {{/modal.footer}}
 
   {{/bs-modal}}
+{{/with}}

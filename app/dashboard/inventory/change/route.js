@@ -1,13 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return {
-      name: 'Cheerios',
-      quantity: 10,
-      change: 0,
-      remaining: 10,
-      id: 0,
-    };
+  setupController(controller, model) {
+    this._super(...arguments);
+
+    controller.set('formValues', {
+      ration: model,
+      quantity: 0,
+    });
   }
 });
