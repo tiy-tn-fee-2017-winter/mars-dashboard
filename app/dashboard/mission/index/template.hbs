@@ -20,10 +20,10 @@
     <td>{{mission.launchTime}}</td>
     <td>{{mission.duration}}</td>
     <td>{{mission.hostCountry}}</td>
-    <td>{{#link-to "mission.edit" mission}}Edit{{/link-to}}</td>
+    <td>{{#link-to "dashboard.mission.edit" mission}}Edit{{/link-to}}</td>
     <td><button {{action "deleteMission" mission}}>Delete</button></td>
     <td>Mission Details</td>
-    {{!-- <td>{{#link-to "mission.details" details}}See More{{/link-to}}</td> --}}
+    {{!-- <td>{{#link-to "dashboard.mission.details" details}}See More{{/link-to}}</td> --}}
     </tr>
     {{/each}}
   </tbody>
