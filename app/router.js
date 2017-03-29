@@ -9,6 +9,13 @@ const Router = Ember.Router.extend({
 Router.map(function () {
   this.route('dashboard', { path: '/' });
   this.route('register');
+  this.route('mission', function () {
+    this.route('create');
+
+    this.route('edit', {
+      path: '/:mission_id/edit'
+    });
+  });
 });
 
 export default Router;

@@ -1,0 +1,11 @@
+{{#with (changeset model) as |formValues|}}
+  <h2>Editing {{model.objective}}</h2>
+
+  <form {{action "saveMission" formValues on="submit"}}>
+    {{input value=formValues.objective}}
+
+    {{#link-to "mission.index"}}Back{{/link-to}}
+
+  <button type="submit">Save</button>
+  </form>
+{{/with}}
