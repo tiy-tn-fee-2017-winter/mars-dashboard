@@ -6,7 +6,6 @@
     {{#modal.body}}
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="{{calc-percent model.quantity model.remaining}}" aria-valuenow="{{calc-percent model.quantity model.remaining}}"></div>
-        {{!-- <div class="progress-bar" role="progressbar" style="{{calc-percent 10 1}}" aria-valuenow="{{calc-percent model.quantity model.remaining}}"></div> --}}
       </div>
       <p>How many used?</p>
       <pre>{{model.remaining}}</pre>
