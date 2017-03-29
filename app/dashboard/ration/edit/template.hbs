@@ -1,0 +1,30 @@
+<div class="box-body">
+  {{#with model as |formValues|}}
+
+    <form {{action "saveRation" formValues on="submit"}}>
+      {{!-- TODO add for and ids to labels and inputs --}}
+      <div class="form-group">
+        <label>Name</label> {{input type="text" value=formValues.name class="form-control" placeholder="Name"}}
+      </div>
+      <div class="form-group">
+        {{!-- TODO make these bind the data and not be stupid links --}}
+        <label>Type</label>
+        <p>
+          {{select-picker content=types selection=formValues.type changeAction=(mut formValues.type)}}
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Qty</label> {{input type="text" value=formValues.quantity class="form-control" placeholder="Qty"}}
+      </div>
+      <div class="form-group">
+        <label>Unit Weight</label> {{input type="text" value=formValues.weight class="form-control" placeholder="Weight"}}
+      </div>
+      <div class="form-group">
+        <label>Expires On</label> {{bootstrap-datepicker placeholder="Date" class="form-control"}}
+      </div>
+      {{#link-to "dashboard.ration.index" class="btn btn-default" }}Back{{/link-to}}
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  {{/with}}
+</div>
+{{outlet}}
