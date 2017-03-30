@@ -43,8 +43,12 @@
           <span>Rations</span>
         {{/link-to}}
       {{/link-to}}
-
-      <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+      {{#link-to "dashboard.inventory" tagName="li"}}
+        {{#link-to "dashboard.inventory"}}
+          <i class="fa fa-link"></i>
+          <span>Inventory</span>
+        {{/link-to}}
+      {{/link-to}}
     </ul>
     <!-- /.sidebar-menu -->
   </section>
