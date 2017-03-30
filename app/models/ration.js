@@ -4,6 +4,7 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   type: DS.attr('string'),
   quantity: DS.attr('number'),
+  remaining: DS.attr('number'),
   weight: DS.attr('number'),
   expiration: DS.attr('date')
 });

@@ -8,6 +8,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
   this.route('dashboard', { path: '/' }, function () {
+    this.route('inventory', function () {
+      this.route('change', { path: '/:ration_id/inventory' });
+    });
+
     this.route('ration', { path: '/rations' }, function () {
       this.route('new');
       this.route('edit', { path: '/:ration_id/edit' });
